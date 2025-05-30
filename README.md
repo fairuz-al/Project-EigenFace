@@ -47,12 +47,12 @@ Network URL:
 .
 ├── README.md
 ├── requirements.txt
-├── src/
+├── src
 │   ├── main.py
 │   ├── interface.py
 │   ├── layout.py
-│   └── recognition.py/
-└── dataset/
+│   └── recognition.py
+└── dataset
 
 ```
 
