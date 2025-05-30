@@ -1,6 +1,0 @@
-streamlit
-Pillow
-numpy
-opencv-python
-pandas
-glob
