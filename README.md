@@ -6,6 +6,7 @@ Aplikasi Nilai Eigen dan EigenFace pada Pengenalan Wajah (Face Recognition)
 - [Basic Information](#basic-information)
 - [Display Program](#display-program)
 - [How To Run](#how-to-run)
+- [Project Structure](#project-structure)
 
 # Basic Information
 Pengenalan wajah (face recognition) menggunakan eigenface yang diprogram menggunakan bahasa python yang perhitungannya dilakukan dengan memanfaatkan grayscale. Pengenalan wajah menggunakan berbagai macam citra wajah yang dapat mengidentifikasi dan menghitung eigen face, eigenvalue, dan eigen vektor. Hasil akhir akan didapatkan 3 hasil tadi dan closest match dengan menggunakan jarak eucledian, pada program juga ada threshold yang berfungsi sebagai parameter kecocokan wajah selain itu ada juga execution time yang menghitung berapa waktu yang diperlukan untuk menjalankan dan menyelesaikan program.
@@ -13,9 +14,9 @@ Pengenalan wajah (face recognition) menggunakan eigenface yang diprogram menggun
 # Display Program
 ![image](https://github.com/user-attachments/assets/81a3ff79-859f-4272-a374-c74d8b944d14)
 
-# How To Run
+## How To Run
 
-## Install the Library
+### Install the Library
 1. Install dependencies dengan pip:
 ```
 .
@@ -26,7 +27,7 @@ Pengenalan wajah (face recognition) menggunakan eigenface yang diprogram menggun
 ├── pandas
 └── glob
 ```
-2. Jalankan pada terminal VSCode maupun CMD 
+2. Jalankan pada terminal VSCode atau CMD 
 ```
 ketik streamlit run (src).py
 ```
@@ -40,3 +41,25 @@ Local URL:
 Network URL: 
 ```
 
+# Project Structure
+
+```
+.
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── main.py
+│   ├── interface.py
+│   ├── layout.py
+│   └── recognition.py/
+└── dataset/
+
+```
+
+
+# Creators
+|              Nama           |     NIM     | 
+|-----------------------------|-------------|
+| Fairuz Siba Al Khirza       |   L0124014  | 
+| Argya Seno Ahmadi Rizqullah |   L0124004  | 
+| Jauhar Mufid Tamir          |   L0124131  | 
