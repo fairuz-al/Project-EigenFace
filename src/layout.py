@@ -143,29 +143,6 @@ def show_distance_analysis(distance_df, threshold):
     )
     st.dataframe(styled_df, use_container_width=True)
 
-def show_calculation_details(eigenface_data):
-    if 'eigenvalues' in eigenface_data:
-        st.markdown("**Sample Calculations:**")
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("**First 3 Eigenvalues :**")
-            for i, val in enumerate(eigenface_data['eigenvalues'][:3]):
-                st.write(f"{i+1} = {val:.6f}")
-        with col2:
-            st.markdown("** Distance Example:**")
-            if 'test_weights' in eigenface_data and 'training_weights' in eigenface_data:
-                test_w = eigenface_data['test_weights'][:3]
-                train_w = eigenface_data['training_weights'][:3, 0]
-                st.write("Test weights: ", [f"{w:.3f}" for w in test_w])
-                st.write("Train weights:", [f"{w:.3f}" for w in train_w])
-                dist = 0.0
-                for i in range(3):
-                    diff = test_w[i] - train_w[i]
-                    dist += diff * diff
-                    st.write(f"(w1[{i}] - w2[{i}])² = ({test_w[i]:.3f} - {train_w[i]:.3f})² = {diff*diff:.6f}")
-                dist = np.sqrt(dist)
-                st.write(f"** Distance = √{dist*dist:.6f} = {dist:.6f}**")
-
 def show_pca_details(eigvals, var_ratio, projections, names):
     st.markdown("#### Legacy PCA View")
     st.info("This view has been replaced with  eigenface-specific analysis above.")
