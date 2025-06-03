@@ -66,19 +66,7 @@ if dataset_path and test_image_file:
                     show_eigenvectors(eigenface_data['eigenvectors'], num=5)
                     show_eigenvalue_analysis(eigenface_data['eigenvalues'], eigenface_data['eigenvectors'])
                     show_distance_analysis(eigenface_data['distance_analysis'], threshold)
-                    st.markdown("#### Calculation Summary")
-                    col_a, col_b, col_c = st.columns(3)
-                    with col_a:
-                        st.metric("Eigenfaces Found", len(eigenface_data['eigenvalues']))
-                    with col_b:
-                        if len(eigenface_data['eigenvalues']) > 0:
-                            dominant_eigenval = eigenface_data['eigenvalues'][0]
-                            st.metric("Dominant Eigenvalue", f"{dominant_eigenval:.2f}")
-                        else:
-                            st.metric("Dominant Eigenvalue", "N/A")
-                    with col_c:
-                        total_images = eigenface_data['training_weights'].shape[1]
-                        st.metric("Training Images", total_images)
+          
         except Exception as e:
             st.error(f"Error during face recognition: {str(e)}")
             with col1:
