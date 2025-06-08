@@ -143,10 +143,6 @@ def show_distance_analysis(distance_df, threshold):
     )
     st.dataframe(styled_df, use_container_width=True)
 
-def show_pca_details(eigvals, var_ratio, projections, names):
-    st.markdown("#### Legacy PCA View")
-    st.info("This view has been replaced with  eigenface-specific analysis above.")
-
 def show_eigenface_reconstruction(original_img, eigenfaces, mean_face, projection, num_components_list=[1, 3, 5, 10]):
     st.markdown("#### Face Reconstruction ")
     cols = st.columns(len(num_components_list) + 1)
